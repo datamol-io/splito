@@ -1,0 +1,49 @@
+name: code-check
+
+on:
+  push:
+    branches: ["main"]
+    tags: ["*"]
+  pull_request:
+    branches:
+      - "*"
+      - "!gh-pages"
+
+jobs:
+  python-format-black:
+    name: Python format [black]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install black
+        run: |
+          pip install black>=23
+
+      - name: Format
+        run: black --check .
+
+  python-lint-ruff:
+    name: Python lint [ruff]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install ruff
+        run: |
+          pip install ruff
+
+      - name: Lint
+        run: ruff .

@@ -1,0 +1,124 @@
+site_name: "Paritio"
+site_description: "Paritio: Machine Learning dataset splitting for life sciences."
+site_url: "https://github.com/datamol-io/partitio"
+repo_url: "https://github.com/datamol-io/partitio"
+repo_name: "datamol-io/partitio"
+copyright: Copyright 2020 - 2023 datamol.io
+
+remote_branch: "gh-pages"
+use_directory_urls: false
+docs_dir: "docs"
+
+# Fail on warnings to detect issues with types and docstring
+strict: true
+
+nav:
+  - Getting started: index.md
+
+theme:
+  name: material
+  # NOTE(hadim): to customize the material primary and secondary color,
+  # see check `docs/assets/css/custom-partitio.css`.
+  palette:
+    primary: deep purple
+    accent: indigo
+
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.path
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+  favicon: images/logo-black.svg
+  logo: images/logo-white.svg
+
+extra_css:
+  - assets/css/custom-partitio.css
+
+extra_javascript:
+  - javascripts/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+
+watch:
+  - partitio/
+
+plugins:
+  - search
+
+  - mkdocstrings:
+      handlers:
+        python:
+          setup_commands:
+            - import sys
+            - sys.path.append("docs")
+            - sys.path.append("partitio")
+          options:
+            show_root_heading: yes
+            heading_level: 3
+            show_source: false
+            group_by_category: true
+            members_order: source
+            separate_signature: true
+            show_signature_annotations: true
+            line_length: 80
+  - mkdocs-jupyter:
+      execute: False
+
+  - mike:
+      version_selector: true
+
+extra:
+  version:
+    # Multi versioning provider for mkdocs-material (used for the JS selector)
+    provider: mike
+  analytics:
+    provider: google
+    property: G-23R9EJVY37
+    # Widget at the bottom of every page to collect information about the user experience
+    # The data is collected in Google Analytics
+    feedback:
+      title: Was this page helpful?
+      ratings:
+        - icon: material/emoticon-happy-outline
+          name: This page was helpful
+          data: 1
+          note: >-
+            Thanks for your feedback!
+        - icon: material/emoticon-sad-outline
+          name: This page could be improved
+          data: 0
+          # NOTE (cwognum): It could be useful to have a link to a feedback form here
+          note: >-
+            Thanks for your feedback!
+  consent:
+    title: Cookie consent
+    description: >-
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.

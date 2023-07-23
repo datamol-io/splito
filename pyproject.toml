@@ -1,0 +1,84 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "partitio"
+description = "Machine Learning dataset splitting for life sciences."
+dynamic = ["version"]
+authors = [
+    { name = "Lu Zhu", email = "lu@valencediscovery.com" },
+    { name = "Hadrien Mary", email = "hadrien@valencediscovery.com" },
+    { name = "Cas Wognum", email = "cas@valencediscovery.com" },
+]
+readme = "README.md"
+requires-python = ">=3.10"
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Scientific/Engineering :: Bio-Informatics",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+]
+dependencies = []
+
+[project.urls]
+"Source Code" = "https://github.com/datamol-io/partitio"
+"Bug Tracker" = "https://github.com/datamol-io/partitio/issues"
+Documentation = "https://partitio-docs.datamol.io/"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools_scm]
+fallback_version = "dev"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["partitio", "partitio.*"]
+exclude = []
+namespaces = false
+
+[tool.black]
+line-length = 110
+target-version = ['py310', 'py311']
+include = '\.pyi?$'
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "--verbose --durations=10 -n auto --cov=partitio --cov-fail-under=85 --cov-report xml --cov-report term"
+testpaths = ["tests"]
+filterwarnings = ["ignore::DeprecationWarning:jupyter_client.connect.*:"]
+
+[tool.coverage.run]
+source = ["partitio/"]
+disable_warnings = ["no-data-collected"]
+data_file = ".coverage/coverage"
+
+[tool.coverage.report]
+omit = ["partitio/__init__.py"]
+
+[tool.coverage.xml]
+output = "coverage.xml"
+
+[tool.ruff]
+ignore = [
+    "E501", # Never enforce `E501` (line length violations).
+]
+line-length = 110
+target-version = "py311"
+
+[tool.ruff.per-file-ignores]
+"__init__.py" = [
+    "F401", # imported but unused
+    "E402", # Module level import not at top of file
+]
