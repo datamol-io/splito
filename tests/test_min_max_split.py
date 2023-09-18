@@ -1,4 +1,4 @@
-from partitio import MolecularMinMaxSplit
+from splito import MolecularMinMaxSplit
 
 
 def test_splits_min_max(dataset_smiles):

@@ -27,7 +27,7 @@ DEFAULT_SIMPD_DESCRIPTORS = pd.DataFrame(
         },
         {
             "name": "fr_benzene/1000 HeavyAtoms",
-            "function": "partitio.simpd.descriptors.fr_benzene_1000_heavy_atoms_count",
+            "function": "splito.simpd.descriptors.fr_benzene_1000_heavy_atoms_count",
             "target_delta_value": -0.2 * 0.44,
         },
     ]

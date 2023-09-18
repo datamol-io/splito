@@ -1,6 +1,6 @@
 import pytest
-from partitio import ScaffoldSplit
-from partitio._scaffold_split import get_scaffold
+from splito import ScaffoldSplit
+from splito._scaffold_split import get_scaffold
 
 
 def test_get_scaffold(manual_smiles):

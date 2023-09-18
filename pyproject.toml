@@ -3,7 +3,7 @@ requires = ["setuptools", "setuptools-scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "partitio"
+name = "splito"
 description = "Machine Learning dataset splitting for life sciences."
 dynamic = ["version"]
 authors = [
@@ -12,7 +12,7 @@ authors = [
     { name = "Cas Wognum", email = "cas@valencediscovery.com" },
 ]
 readme = "README.md"
-requires-python = ">=3.10"
+requires-python = ">=3.9"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
@@ -29,12 +29,24 @@ classifiers = [
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
 ]
-dependencies = []
+dependencies = [
+    "tqdm",
+    "loguru",
+    "pydantic",
+    "numpy",
+    "pandas",
+    "scipy",
+    "scikit-learn",
+    "matplotlib",
+    "seaborn",
+    "jenkspy",
+    "datamol",
+]
 
 [project.urls]
-"Source Code" = "https://github.com/datamol-io/partitio"
-"Bug Tracker" = "https://github.com/datamol-io/partitio/issues"
-Documentation = "https://partitio-docs.datamol.io/"
+"Source Code" = "https://github.com/datamol-io/splito"
+"Bug Tracker" = "https://github.com/datamol-io/splito/issues"
+Documentation = "https://splito-docs.datamol.io/"
 
 [tool.setuptools]
 include-package-data = true
@@ -44,7 +56,7 @@ fallback_version = "dev"
 
 [tool.setuptools.packages.find]
 where = ["."]
-include = ["partitio", "partitio.*"]
+include = ["splito", "splito.*"]
 exclude = []
 namespaces = false
 
@@ -55,17 +67,17 @@ include = '\.pyi?$'
 
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = "--verbose --durations=10 -n auto --cov=partitio --cov-fail-under=85 --cov-report xml --cov-report term"
+addopts = "--verbose --durations=10 -n auto --cov=splito --cov-fail-under=85 --cov-report xml --cov-report term"
 testpaths = ["tests"]
 filterwarnings = ["ignore::DeprecationWarning:jupyter_client.connect.*:"]
 
 [tool.coverage.run]
-source = ["partitio/"]
+source = ["splito/"]
 disable_warnings = ["no-data-collected"]
 data_file = ".coverage/coverage"
 
 [tool.coverage.report]
-omit = ["partitio/__init__.py"]
+omit = ["splito/__init__.py"]
 
 [tool.coverage.xml]
 output = "coverage.xml"

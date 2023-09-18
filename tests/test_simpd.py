@@ -2,7 +2,7 @@ import pytest
 
 import datamol as dm
 
-from partitio.simpd import SIMPDSplitter
+from splito.simpd import SIMPDSplitter
 
 
 def test_simpd():

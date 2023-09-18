@@ -1,21 +1,25 @@
-# Partitio
+# Splito
 
-[![test](https://github.com/datamol-io/partitio/actions/workflows/test.yml/badge.svg)](https://github.com/datamol-io/partitio/actions/workflows/test.yml)
-[![release](https://github.com/datamol-io/partitio/actions/workflows/release.yml/badge.svg)](https://github.com/datamol-io/partitio/actions/workflows/release.yml)
-[![code-check](https://github.com/datamol-io/partitio/actions/workflows/code-check.yml/badge.svg)](https://github.com/datamol-io/partitio/actions/workflows/code-check.yml)
-[![doc](https://github.com/datamol-io/partitio/actions/workflows/doc.yml/badge.svg)](https://github.com/datamol-io/partitio/actions/workflows/doc.yml)
+[![test](https://github.com/datamol-io/splito/actions/workflows/test.yml/badge.svg)](https://github.com/datamol-io/splito/actions/workflows/test.yml)
+[![release](https://github.com/datamol-io/splito/actions/workflows/release.yml/badge.svg)](https://github.com/datamol-io/splito/actions/workflows/release.yml)
+[![code-check](https://github.com/datamol-io/splito/actions/workflows/code-check.yml/badge.svg)](https://github.com/datamol-io/splito/actions/workflows/code-check.yml)
+[![doc](https://github.com/datamol-io/splito/actions/workflows/doc.yml/badge.svg)](https://github.com/datamol-io/splito/actions/workflows/doc.yml)
 
-Partitio is a machine learning dataset splitting library for life sciences.
+Splito is a machine learning dataset splitting library for life sciences.
+
+## Documentation
+
+Find the documentation at <https://splito-docs.datamol.io/>.
 
 ## Development lifecycle
 
 ### Setup dev environment
 
 ```bash
-micromamba create -n partitio -f env.yml
-micromamba activate partitio
+micromamba create -n splito -f env.yml
+micromamba activate splito
 
-pip install -e .
+pip install --no-deps -e .
 ```
 
 ### Tests

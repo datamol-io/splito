@@ -60,7 +60,7 @@ class SIMPDSplitter(BaseShuffleSplit):
             ngens: The number of generations for the GA.
             swap_fraction: The swap fraction for the GA. Swap N% of the bits in each mutation.
             simpd_descriptors: The descriptors to use for the GA. If None, the default descriptors from the paper will be used.
-                Load them from `partitio.simpd.DEFAULT_SIMPD_DESCRIPTORS`.
+                Load them from `splito.simpd.DEFAULT_SIMPD_DESCRIPTORS`.
             target_train_frac_active: The target fraction of active compounds in the training set. Set to -1 to disable.
             target_test_frac_active: The target fraction of active compounds in the test set. Set to -1 to disable.
             target_test_set_frac: The target fraction of the test set.

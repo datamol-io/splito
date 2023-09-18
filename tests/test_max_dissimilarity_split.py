@@ -1,6 +1,6 @@
 import numpy as np
 
-from partitio import MaxDissimilaritySplit
+from splito import MaxDissimilaritySplit
 
 
 def test_splits_max_dissimilar_default_feats(dataset_smiles):

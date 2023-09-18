@@ -2,7 +2,7 @@ import datamol as dm
 import numpy as np
 from sklearn.model_selection import ShuffleSplit
 
-from partitio import (
+from splito import (
     MOODSplitter,
     ScaffoldSplit,
     PerimeterSplit,

@@ -1,7 +1,7 @@
 import pytest
 
-from partitio import StratifiedDistributionSplit
-from partitio._distribution_split import Clustering1D
+from splito import StratifiedDistributionSplit
+from splito._distribution_split import Clustering1D
 
 
 @pytest.mark.parametrize("algorithm", list(Clustering1D))

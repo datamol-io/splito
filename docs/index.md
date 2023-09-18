@@ -1,3 +1,3 @@
-# Introduction
+# Getting Started
 
-Welcome to the Partitio documentation!
+Welcome to the splito documentation!

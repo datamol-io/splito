@@ -1,6 +1,6 @@
 import numpy as np
 
-from partitio import PerimeterSplit
+from splito import PerimeterSplit
 
 
 def test_splits_perimeter(dataset_smiles):

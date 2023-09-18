@@ -1,6 +1,6 @@
 import numpy as np
 
-from partitio import KMeansSplit
+from splito import KMeansSplit
 
 
 def test_splits_kmeans_default_feats(dataset_smiles):

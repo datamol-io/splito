@@ -1,6 +1,6 @@
 import pytest
 import datamol as dm
-from partitio import MolecularWeightSplit
+from splito import MolecularWeightSplit
 
 
 @pytest.mark.parametrize("generalize_to_larger", [True, False])
