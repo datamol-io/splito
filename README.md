@@ -1,4 +1,9 @@
-# Splito
+<div align="center">
+    <img src="docs/images/logo-black.svg" height="150px">
+    <h3>Splito - Dataset splitting for life sciences</h3>
+</div>
+
+---
 
 [![test](https://github.com/datamol-io/splito/actions/workflows/test.yml/badge.svg)](https://github.com/datamol-io/splito/actions/workflows/test.yml)
 [![release](https://github.com/datamol-io/splito/actions/workflows/release.yml/badge.svg)](https://github.com/datamol-io/splito/actions/workflows/release.yml)
