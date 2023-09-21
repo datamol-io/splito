@@ -26,6 +26,7 @@ def visualize_chemspace(data:pd.DataFrame, split_names:str, mol_col:str="smiles"
             y="UMAP_1",
             style=size_col,
             hue=split_name,
+            alpha=0.7
         )
         fig.set_title(f"UMAP Embedding of compounds for {split_name}")
     return figs
