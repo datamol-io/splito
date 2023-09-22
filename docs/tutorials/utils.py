@@ -1,4 +1,7 @@
+from typing import List
+
 from matplotlib import pyplot as plt
+
 import pandas as pd
 import umap
 import seaborn as sns
@@ -8,7 +11,7 @@ import warnings
 warnings.filterwarnings("ignore")
 
 
-def visualize_chemspace(data: pd.DataFrame, split_names: str, mol_col: str = "smiles", size_col=None):
+def visualize_chemspace(data: pd.DataFrame, split_names: List[str], mol_col: str = "smiles", size_col=None):
     figs = plt.figure(num=3)
     features = [dm.to_fp(mol) for mol in data[mol_col]]
     embedding = umap.UMAP().fit_transform(features)
