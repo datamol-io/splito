@@ -14,6 +14,12 @@ strict: true
 
 nav:
   - Getting started: index.md
+  - Tutorials:
+    - The Basics: tutorials/The_Basics.ipynb
+    - Structure-based Splitters: tutorials/Structure_based_Splitters.ipynb
+    - MOOD Protocol: tutorials/MOOD_Protocol.ipynb
+    - MPO Splitters: tutorials/MPO_Splitters.ipynb
+    - Other Splitters: tutorials/Other_Splitters.ipynb
 
 theme:
   name: material
