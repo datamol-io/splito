@@ -3,7 +3,7 @@ site_description: "Splito: Machine Learning dataset splitting for life sciences.
 site_url: "https://github.com/datamol-io/splito"
 repo_url: "https://github.com/datamol-io/splito"
 repo_name: "datamol-io/splito"
-copyright: Copyright 2020 - 2023 datamol.io
+copyright: Copyright 2023 - 2024 datamol.io
 
 remote_branch: "gh-pages"
 use_directory_urls: false

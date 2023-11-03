@@ -6,13 +6,17 @@ Splito is part of the Datamol ecosystem: <https://datamol.io>.
 
 ## Installation
 
-Use conda:
+You can install `splito` using pip:
+
+```bash
+pip install splito
+```
+
+You can use conda/mamba. Ask @maclandrol for credentials to the conda forge or for a token
 
 ```bash
 mamba install -c conda-forge splito
 ```
-
-_**Note:** We highly recommend using a [Conda Python distribution](https://github.com/conda-forge/miniforge) to install Datamol. The package is also pip installable if you need it: `pip install splito`._
 
 ## Quick API Tour
 
