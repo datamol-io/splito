@@ -20,6 +20,10 @@ nav:
     - MOOD Protocol: tutorials/MOOD_Protocol.ipynb
     - MPO Splitters: tutorials/MPO_Splitters.ipynb
     - Other Splitters: tutorials/Other_Splitters.ipynb
+  - API:
+    - splito.plot: api/plot.md
+    - splito.utils: api/utils.md
+    - split: api/split.md
 
 theme:
   name: material
