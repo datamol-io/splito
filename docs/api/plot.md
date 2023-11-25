@@ -1,0 +1,3 @@
+# `splito.plot`
+
+::: splito.plot

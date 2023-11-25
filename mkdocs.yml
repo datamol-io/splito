@@ -15,11 +15,16 @@ strict: true
 nav:
   - Getting started: index.md
   - Tutorials:
-    - The Basics: tutorials/The_Basics.ipynb
-    - Structure-based Splitters: tutorials/Structure_based_Splitters.ipynb
-    - MOOD Protocol: tutorials/MOOD_Protocol.ipynb
-    - MPO Splitters: tutorials/MPO_Splitters.ipynb
-    - Other Splitters: tutorials/Other_Splitters.ipynb
+      - The Basics: tutorials/The_Basics.ipynb
+      - Structure-based Splitters: tutorials/Structure_based_Splitters.ipynb
+      - MOOD Protocol: tutorials/MOOD_Protocol.ipynb
+      - MPO Splitters: tutorials/MPO_Splitters.ipynb
+      - Other Splitters: tutorials/Other_Splitters.ipynb
+  - API:
+      - splito: api/splito.md
+      - splito.utils: api/utils.md
+      - splito.simpd: api/simpd.md
+      - splito.plot: api/plot.md
 
 theme:
   name: material
@@ -62,8 +67,8 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -91,6 +96,7 @@ plugins:
             separate_signature: true
             show_signature_annotations: true
             line_length: 80
+
   - mkdocs-jupyter:
       execute: False
 
@@ -101,4 +107,3 @@ extra:
   version:
     # Multi versioning provider for mkdocs-material (used for the JS selector)
     provider: mike
-
