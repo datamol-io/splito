@@ -41,6 +41,7 @@ dependencies = [
     "seaborn",
     "jenkspy",
     "datamol",
+    "rdkit",
 ]
 
 [project.urls]
