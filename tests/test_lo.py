@@ -1,4 +1,3 @@
-import pytest
 import numpy as np
 from rdkit.Chem import AllChem
 import datamol as dm
@@ -6,17 +5,18 @@ from rdkit import Chem, DataStructs
 
 from splito.lohi import LoSplitter
 
+
 def test_lo():
     data = dm.solubility()
-    data = data.drop_duplicates(['smiles'])
+    data = data.drop_duplicates(["smiles"])
 
     smiles = []
     val = []
 
     for idx in range(len(data)):
-        if AllChem.MolFromSmiles(data.iloc[idx]['smiles']):
-            smiles.append(data.iloc[idx]['smiles'])
-            val.append(data.iloc[idx]['SOL'])
+        if AllChem.MolFromSmiles(data.iloc[idx]["smiles"]):
+            smiles.append(data.iloc[idx]["smiles"])
+            val.append(data.iloc[idx]["SOL"])
 
     smiles = np.array(smiles)
     val = np.array(val)
@@ -27,7 +27,6 @@ def test_lo():
 
     for cluster in clusters_idx:
         one_cluster_check(train_idx, cluster, smiles, 0.4, 5, val, 0.60)
-    
 
     # different parameters
     splitter = LoSplitter(threshold=0.6, min_cluster_size=7, std_threshold=0.8)
@@ -55,9 +54,9 @@ def one_cluster_check(train_idx, cluster_idx, smiles, threshold, min_cluster_siz
         sims = np.array(sims)
         assert sum(sims > threshold) == 1
         hit_indices.add(np.argmax(sims))
-    
+
     assert len(hit_indices) == 1  # the hit is the same for all cluster
-    
+
     hit_idx = None
     for idx in hit_indices:
         hit_idx = idx
@@ -66,7 +65,5 @@ def one_cluster_check(train_idx, cluster_idx, smiles, threshold, min_cluster_siz
 
     cluster_values = list(values[cluster_idx]) + [values[hit_idx]]
     cluster_values = np.array(cluster_values)
-    
+
     assert cluster_values.std() >= std_threshold
-
-
