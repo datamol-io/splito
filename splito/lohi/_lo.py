@@ -42,19 +42,15 @@ class LoSplitter:
         if not isinstance(values, np.ndarray):
             values = np.array(values)
 
-        train_idx, clusters_idx = self._select_distinct_clusters(smiles, values, n_jobs, verbose)
-        train_idx = list(train_idx)
+        train_idx, clusters_idx, central_nodes = self._select_distinct_clusters(
+            smiles, values, n_jobs, verbose
+        )
+        train_idx = list(train_idx) + central_nodes
 
-        # Move one molecule from each cluster to the training set
-        leave_one_clusters = []
-        for cluster in clusters_idx:
-            train_idx.append(cluster[-1])
-            leave_one_clusters.append(cluster[:-1])
-
-        if not leave_one_clusters:
+        if not clusters_idx:
             logger.warninig("No clusters were found. Was your std_threshold too constrained?")
 
-        return train_idx, leave_one_clusters
+        return train_idx, clusters_idx
 
     def _select_distinct_clusters(self, smiles, values, n_jobs, verbose):
         """
@@ -72,20 +68,22 @@ class LoSplitter:
             n_jobs=n_jobs,
         )
         all_clusters_nodes = []  # the test clusters of nodes
+        central_nodes = []  # central nodes of the clusters
 
         while len(all_clusters_nodes) < self.max_clusters:
             total_neighbours, stds = self._get_neighborhood(train_fps, values)
             central_idx = self._get_central_idx(total_neighbours, stds)
             if central_idx is None:
                 break  # there are no more clusters
+            central_nodes.append(train_nodes[central_idx])
 
-            cluster_idx = self._collect_cluster(central_idx, train_fps)
+            cluster_indices = self._collect_cluster(central_idx, train_fps)
 
             # Save the cluster nodes
-            all_clusters_nodes.append(train_nodes[cluster_idx])
+            all_clusters_nodes.append(train_nodes[cluster_indices])
 
             # Remove neighbours of the cluster from the rest of nodes
-            nearest_sim = self._get_nearest_sim(train_fps, cluster_idx)
+            nearest_sim = self._get_nearest_sim(train_fps, cluster_indices + [central_idx])
             rest_idx = []
             for idx, sim in enumerate(nearest_sim):
                 if sim < self.threshold:
@@ -98,8 +96,8 @@ class LoSplitter:
                 progress_bar.update(1)
         if verbose:
             progress_bar.close()
-            logger.info(f"Found {len(all_clusters_nodes)} clusters.")
-        return train_nodes, all_clusters_nodes
+        logger.info(f"Found {len(all_clusters_nodes)} clusters.")
+        return train_nodes, all_clusters_nodes, central_nodes
 
     def _get_neighborhood(self, train_fps, values):
         """
@@ -137,19 +135,18 @@ class LoSplitter:
         """
         sims = DataStructs.BulkTanimotoSimilarity(train_fps[central_idx], train_fps)
         is_neighbour = np.array(sims) > self.threshold
-        cluster_idx = []
+        cluster_indices = []
         for idx, value in enumerate(is_neighbour):
             if value:
-                if idx != central_idx:  # we add the central molecule at the end of the list
-                    cluster_idx.append(idx)
-        cluster_idx.append(central_idx)
-        return cluster_idx
+                if idx != central_idx:
+                    cluster_indices.append(idx)
+        return cluster_indices
 
-    def _get_nearest_sim(self, train_fps, cluster_idx):
+    def _get_nearest_sim(self, train_fps, indices_to_remove):
         """
         For each train molecule find the maximal similarity to molecules in the cluster_smiles.
         """
-        cluster_fps = [train_fps[idx] for idx in cluster_idx]
+        cluster_fps = [train_fps[idx] for idx in indices_to_remove]
         nearest_sim = []
         for train_fp in train_fps:
             sims = DataStructs.BulkTanimotoSimilarity(train_fp, cluster_fps)
