@@ -40,6 +40,41 @@ def train_test_split(
 
     Inspired by sklearn.model_selection.train_test_split, this function is meant as a convenience function
     that provides a less verbose way of using the different splitters.
+
+    **Examples**:
+
+    Let's first create a toy dataset
+
+    ```python
+    import datamol as dm
+    import numpy as np
+
+    data = dm.data.freesolv()
+    smiles = data["smiles"].values
+    X = np.array([dm.to_fp(dm.to_mol(smi)) for smi in smiles])
+    y = data["expt"].values
+    ```
+
+    Now we can split our data.
+
+    ```python
+    X_train, X_test, y_train, y_test = train_test_split(X, y, method="random")
+    ```
+
+    More parameters
+    ```python
+    X_train, X_test, y_train, y_test = train_test_split(X, y, method="random", test_size=0.1, random_state=42)
+    ```
+
+    Scaffold split (note that you need to specify `smiles`):
+    ```python
+    X_train, X_test, y_train, y_test = train_test_split(X, y, smiles=smiles, method="scaffold")
+    ```
+
+    Distance-based split:
+    ```python
+    X_train, X_test, y_train, y_test = train_test_split(X, y, method="kmeans")
+    ```
     """
 
     X = np.array(X)
