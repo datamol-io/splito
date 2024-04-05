@@ -1,10 +1,9 @@
 import abc
+from typing import Callable, Optional, Sequence, Union
 
-import numpy as np
 import datamol as dm
-
-from typing import Callable, Union, Optional, Sequence
-
+import numpy as np
+import pandas as pd
 from numpy.random import RandomState
 from sklearn.metrics import pairwise_distances
 from sklearn.model_selection import GroupShuffleSplit
@@ -13,10 +12,24 @@ from sklearn.utils.validation import _num_samples  # noqa W0212
 
 from .utils import get_kmeans_clusters
 
-
 # In case users provide a list of SMILES instead of features, we rely on ECFP4 and the tanimoto distance by default
 MOLECULE_DEFAULT_FEATURIZER = dict(name="ecfp", kwargs=dict(radius=2, nBits=2048))
 MOLECULE_DEFAULT_DISTANCE_METRIC = "jaccard"
+
+
+def guess_distance_metric(example):
+    """Guess the appropriate distance metric given an exemplary datapoint"""
+
+    # By default we use the Euclidean distance
+    metric = "euclidean"
+
+    # For binary vectors we use jaccard
+    if isinstance(example, pd.DataFrame):
+        example = example.values  # DataFrames would require all().all() otherwise
+    if ((example == 0) | (example == 1)).all():
+        metric = "jaccard"
+
+    return metric
 
 
 def convert_to_default_feats_if_smiles(
@@ -46,7 +59,7 @@ class DistanceSplitBase(GroupShuffleSplit, abc.ABC):
     def __init__(
         self,
         n_splits=10,
-        metric: Union[str, Callable] = "euclidean",
+        metric: Optional[Union[str, Callable]] = None,
         n_jobs: Optional[int] = None,
         test_size: Optional[Union[float, int]] = None,
         train_size: Optional[Union[float, int]] = None,
@@ -108,10 +121,12 @@ class DistanceSplitBase(GroupShuffleSplit, abc.ABC):
         if base_seed is None:
             base_seed = 0
 
-        for i in range(self.n_splits):
-            # Convert to ECFP4 if X is a list of smiles
-            X, self._metric = convert_to_default_feats_if_smiles(X, self._metric, n_jobs=self._n_jobs)
+        # Convert to ECFP4 if X is a list of smiles
+        X, self._metric = convert_to_default_feats_if_smiles(X, self._metric, n_jobs=self._n_jobs)
+        if self._metric is None:
+            self._metric = guess_distance_metric(X[0])
 
+        for i in range(self.n_splits):
             # Possibly group the data to improve computation efficiency
             groups = self.reduce(X, base_seed + i)
 
