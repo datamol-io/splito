@@ -6,7 +6,7 @@ from ._molecular_weight import MolecularWeightSplit
 from ._mood_split import MOODSplitter
 from ._perimeter_split import PerimeterSplit
 from ._scaffold_split import ScaffoldSplit
-from ._split import train_test_split
+from ._split import train_test_split, train_test_split_indices
 
 __all__ = [
     "MOODSplitter",
@@ -18,4 +18,5 @@ __all__ = [
     "MolecularWeightSplit",
     "MolecularMinMaxSplit",
     "train_test_split",
+    "train_test_split_indices",
 ]
