@@ -7,26 +7,41 @@ from loguru import logger
 
 
 class LoSplitter:
-    def __init__(self, threshold=0.4, min_cluster_size=5, max_clusters=50, std_threshold=0.60):
+    def __init__(
+        self,
+        threshold: float = 0.4,
+        min_cluster_size: int = 5,
+        max_clusters: int = 50,
+        std_threshold: float = 0.60,
+    ):
         """
-        Creates the splitter object.
+        A splitter that prepares data for training ML models for Lead Optimization or to guide
+        molecular generative models. These models must be sensitive to minor modifications of
+        molecules, and this splitter constructs a test that allows the evaluation of a model's
+        ability to distinguish those modifications.
 
         Args:
-            threshold: molecules with a similarity higher than this value are considered similar.
-            min_cluster_size: number of molecules per cluster.
-            max_clusters: maximum number of selected clusters. The remaining molecules go to the training set.
-            std_threshold: Lower bound of the acceptable standard deviation for a cluster. It should be greater than measurement noise.
-                            If you're using ChEMBL-like data, set it to 0.60 for logKi and 0.70 for logIC50.
-                            Set it lower if you have a high-quality dataset.
+            threshold: ECFP4 1024-bit Tanimoto similarity threshold.
+                Molecules more similar than this threshold are considered too similar and can be grouped together in one cluster.
+            min_cluster_size: the minimum number of molecules per cluster.
+            max_clusters: the maximum number of selected clusters. The remaining molecules go to the training set.
+                This can be useful for limiting your test set to get more molecules in the train set.
+            std_threshold: the lower bound of the acceptable standard deviation for a cluster's values. It should be greater than the measurement noise.
+                For ChEMBL-like data set it to 0.60 for logKi and 0.70 for logIC50.
+                Set it lower if you have a high-quality dataset.
+
+        For more information, see a tutorial in the docs and Steshin 2023, Lo-Hi: Practical ML Drug Discovery Benchmark.
         """
         self.threshold = threshold
         self.min_cluster_size = min_cluster_size
         self.max_clusters = max_clusters
         self.std_threshold = std_threshold
 
-    def split(self, smiles, values, n_jobs=-1, verbose=1):
+    def split(
+        self, smiles: list[str], values: list[float], n_jobs: int = -1, verbose: int = 1
+    ) -> tuple[list[int], list[list[int]]]:
         """
-        Split the dataset of smiles and their continuous values.
+        Split the dataset into test clusters and train.
 
         Args:
             smiles: list of smiles.

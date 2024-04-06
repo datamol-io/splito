@@ -19,11 +19,13 @@ nav:
       - Structure-based Splitters: tutorials/Structure_based_Splitters.ipynb
       - MOOD Protocol: tutorials/MOOD_Protocol.ipynb
       - MPO Splitters: tutorials/MPO_Splitters.ipynb
+      - Lo Splitter: tutorials/Lo_splitter.ipynb
       - Other Splitters: tutorials/Other_Splitters.ipynb
   - API:
       - splito: api/splito.md
       - splito.utils: api/utils.md
       - splito.simpd: api/simpd.md
+      - splito.lohi: api/lohi.md
       - splito.plot: api/plot.md
 
 theme:

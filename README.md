@@ -58,6 +58,23 @@ You can run tests locally with:
 pytest
 ```
 
+### Code style
+We use `ruff` as a linter and formatter. 
+
+```bash
+ruff check
+ruff format
+```
+
+### Documentation
+
+You can build and run documentation server with:
+
+```bash
+mkdocs serve
+```
+
+
 ## License
 
 Under the Apache-2.0 license. See [LICENSE](LICENSE).
