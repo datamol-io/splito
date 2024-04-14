@@ -1,7 +1,5 @@
 import numpy as np
-from rdkit.Chem import AllChem
 import datamol as dm
-from rdkit import Chem, DataStructs
 
 from splito.lohi import LoSplitter
 
