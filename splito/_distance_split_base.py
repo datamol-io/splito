@@ -13,7 +13,7 @@ from sklearn.utils.validation import _num_samples  # noqa W0212
 from .utils import get_kmeans_clusters
 
 # In case users provide a list of SMILES instead of features, we rely on ECFP4 and the tanimoto distance by default
-MOLECULE_DEFAULT_FEATURIZER = dict(name="ecfp", kwargs=dict(radius=2, nBits=2048))
+MOLECULE_DEFAULT_FEATURIZER = dict(name="ecfp", kwargs=dict(radius=2, fpSize=2048))
 MOLECULE_DEFAULT_DISTANCE_METRIC = "jaccard"
 
 
