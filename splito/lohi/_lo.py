@@ -1,9 +1,10 @@
-from rdkit import DataStructs
-import numpy as np
-from tqdm import tqdm
-import datamol as dm
 import functools
+
+import datamol as dm
+import numpy as np
 from loguru import logger
+from rdkit import DataStructs
+from tqdm import tqdm
 
 
 class LoSplitter:
@@ -78,7 +79,7 @@ class LoSplitter:
         train_nodes = np.array(range(len(smiles)))
 
         train_fps = dm.parallelized(
-            functools.partial(dm.to_fp, as_array=False, radius=2, nBits=1024),
+            functools.partial(dm.to_fp, as_array=False, radius=2, fpSize=1024),
             smiles,
             n_jobs=n_jobs,
         )
