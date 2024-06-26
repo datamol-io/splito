@@ -26,7 +26,7 @@ def one_cluster_check(train_idx, cluster_idx, smiles, threshold, min_cluster_siz
     # Ensure there is only one similar molecule in the train
     train_smiles = smiles[train_idx]
     cluster_smiles = smiles[cluster_idx]
-    distance_matrix = dm.similarity.cdist(cluster_smiles, train_smiles, radius=2, nBits=1024)
+    distance_matrix = dm.similarity.cdist(cluster_smiles, train_smiles, radius=2, fpSize=1024)
     similarity_matrix = 1.0 - distance_matrix
     is_too_similar = similarity_matrix > threshold
     no_hits_per_mol = np.sum(is_too_similar, axis=1)
