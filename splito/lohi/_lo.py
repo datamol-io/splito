@@ -1,10 +1,9 @@
-import functools
-
-import datamol as dm
-import numpy as np
-from loguru import logger
 from rdkit import DataStructs
+import numpy as np
 from tqdm import tqdm
+import datamol as dm
+import functools
+from loguru import logger
 
 
 class LoSplitter:
