@@ -40,7 +40,7 @@ dependencies = [
     "matplotlib",
     "seaborn",
     "jenkspy",
-    "datamol",
+    "datamol>=0.12.5",
     "rdkit",
 ]
 
