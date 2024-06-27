@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../images/logo-black.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -152,7 +152,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -864,14 +864,14 @@
 
 
 <h3 id="splito.utils" class="doc doc-heading">
-          <span class="doc doc-object-name doc-module-name">splito.utils</span>
+            <span class="doc doc-object-name doc-module-name">splito.utils</span>
 
 
 </h3>
 
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
 
@@ -887,21 +887,21 @@
 
 
 <h4 id="splito.utils.EmpiricalKernelMapTransformer" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">EmpiricalKernelMapTransformer</span>
+            <span class="doc doc-object-name doc-class-name">EmpiricalKernelMapTransformer</span>
 
 
 </h4>
 
 
-  <div class="doc doc-contents ">
+    <div class="doc doc-contents ">
 
-  
+
       <p>Transforms a dataset using the Empirical Kernel Map method.
 In this, a point is defined by its distance to a set of reference points.
 After this transformation, one can use the euclidean metric even if the original space was not euclidean compatible.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -913,45 +913,41 @@ After this transformation, one can use the euclidean metric even if the original
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h5 id="splito.utils.EmpiricalKernelMapTransformer.__call__" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">__call__</span>
+            <span class="doc doc-object-name doc-function-name">__call__</span>
 
 
 </h5>
 <div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="fm">__call__</span><span class="p">(</span><span class="nf">X</span><span class="p">)</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Transforms a list of datapoints</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h5 id="splito.utils.EmpiricalKernelMapTransformer.transform" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">transform</span>
+            <span class="doc doc-object-name doc-function-name">transform</span>
 
 
 </h5>
 <div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">transform</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Transforms a single datapoint</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -959,41 +955,36 @@ After this transformation, one can use the euclidean metric even if the original
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h4 id="splito.utils.get_iqr_outlier_bounds" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">get_iqr_outlier_bounds</span>
+            <span class="doc doc-object-name doc-function-name">get_iqr_outlier_bounds</span>
 
 
 </h4>
 <div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_iqr_outlier_bounds</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">factor</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">1.5</span><span class="p">)</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Return the bounds for outliers using the Inter-Quartile Range (IQR) method.
 Returns a lower and upper bound. Any value exceeding these bounds is considered an outlier.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h4 id="splito.utils.get_kmeans_clusters" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">get_kmeans_clusters</span>
+            <span class="doc doc-object-name doc-function-name">get_kmeans_clusters</span>
 
 
 </h4>
@@ -1006,13 +997,13 @@ Returns a lower and upper bound. Any value exceeding these bounds is considered 
 </span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">)</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Get the k-means clusters for a set of datapoints</p>
 <p>If the base metric is not euclidean, we use the Empirical Kernel Map
 to transform the data into a euclidean compatible space.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -1020,7 +1011,7 @@ to transform the data into a euclidean compatible space.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -1122,9 +1113,7 @@ to transform the data into a euclidean compatible space.</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.3220b9d7.min.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

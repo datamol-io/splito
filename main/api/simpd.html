@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../images/logo-black.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -152,7 +152,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -816,17 +816,17 @@
 
 
 <h3 id="splito.simpd.SIMPDSplitter" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">splito.simpd.SIMPDSplitter</span>
+            <span class="doc doc-object-name doc-class-name">splito.simpd.SIMPDSplitter</span>
 
 
 </h3>
 
 
-  <div class="doc doc-contents first">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="sklearn.model_selection.BaseShuffleSplit">BaseShuffleSplit</span></code></p>
+    <div class="doc doc-contents first">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="sklearn.model_selection.BaseShuffleSplit">BaseShuffleSplit</span></code></p>
 
-  
+
       <p>The SIMPD (SImulated Medicinal chemistry Project Data) is based on a multi-objective
 genetic algorithm (MOGA) to split a set of compounds with bioactivity data into one or more training and
 test sets that differ from each other in ways resembling the differences between the temporal training/test
@@ -836,7 +836,7 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
 <p>The source code has been largely inspired by the original authors implementation available at <a href="https://github.com/rinikerlab/molecular_time_series/tree/55eb420ab0319fbb18cc00fe62a872ac568ad7f5">https://github.com/rinikerlab/molecular_time_series/tree/55eb420ab0319fbb18cc00fe62a872ac568ad7f5</a>.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -848,82 +848,79 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h4 id="splito.simpd.SIMPDSplitter.fit" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">fit</span>
+            <span class="doc doc-object-name doc-function-name">fit</span>
 
 
 </h4>
 <div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">fit</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">groups</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Fit the splitter against a given dataset.</p>
 
 
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>X</code></td>
+            <td>
+                  <code><span title="numpy.ndarray">ndarray</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>An array of molecules.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>y</code></td>
+            <td>
+                  <code><span title="numpy.ndarray">ndarray</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>An array of activities (only 1D is supported).</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>groups</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="numpy.ndarray">ndarray</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>An array of groups.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>X</code></td>
-          <td>
-                <code><span title="numpy.ndarray">ndarray</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An array of molecules.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>y</code></td>
-          <td>
-                <code><span title="numpy.ndarray">ndarray</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An array of activities (only 1D is supported).</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>groups</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="numpy.ndarray">ndarray</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An array of groups.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -931,19 +928,16 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
 
   </div>
 
-  </div>
-
+    </div>
 
 </div><hr />
-
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h3 id="splito.simpd.run_SIMPD" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">splito.simpd.run_SIMPD</span>
+            <span class="doc doc-object-name doc-function-name">splito.simpd.run_SIMPD</span>
 
 
 </h3>
@@ -973,9 +967,9 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">)</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  </div>
+    </div>
 
 </div><hr />
 
@@ -985,9 +979,9 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
 
 
 <h3 id="splito.simpd.DEFAULT_SIMPD_DESCRIPTORS" class="doc doc-heading">
-          <span class="doc doc-object-name doc-attribute-name">splito.simpd.DEFAULT_SIMPD_DESCRIPTORS</span>
+            <span class="doc doc-object-name doc-attribute-name">splito.simpd.DEFAULT_SIMPD_DESCRIPTORS</span>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
   </span>
@@ -1019,8 +1013,8 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
 </span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">)</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents first">
-  </div>
+    <div class="doc doc-contents first">
+    </div>
 
 </div>
 
@@ -1122,9 +1116,7 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.3220b9d7.min.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

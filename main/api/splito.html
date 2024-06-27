@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../images/logo-black.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -152,7 +152,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -1231,17 +1231,16 @@
 
 
 <h3 id="splito" class="doc doc-heading">
-          <span class="doc doc-object-name doc-module-name">splito</span>
+            <span class="doc doc-object-name doc-module-name">splito</span>
 
 
 </h3>
 
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -1254,9 +1253,8 @@
 <div class="doc doc-object doc-function">
 
 
-
 <h4 id="splito.train_test_split" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">train_test_split</span>
+            <span class="doc doc-object-name doc-function-name">train_test_split</span>
 
 
 </h4>
@@ -1271,8 +1269,8 @@
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Splits a set of molecules into a train and test set.</p>
 <p>Inspired by sklearn.model_selection.train_test_split, this function is meant as a convenience function
 that provides a less verbose way of using the different splitters.</p>
@@ -1300,130 +1298,127 @@ that provides a less verbose way of using the different splitters.</p>
 </span></code></pre></div></p>
 
 
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>X</code></td>
+            <td>
+                  <code><span title="numpy.ndarray">ndarray</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The feature matrix.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>y</code></td>
+            <td>
+                  <code><span title="numpy.ndarray">ndarray</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The target values.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>molecules</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="typing.Sequence">Sequence</span>[<span title="typing.Union">Union</span>[str, <span title="datamol.Mol">Mol</span>]]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>A list of molecules to be used for the split. Required for some splitting methods.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>method</code></td>
+            <td>
+                  <code><span title="typing.Union">Union</span>[str, <span title="splito._split.SimpleSplittingMethod">SimpleSplittingMethod</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The splitting method to use. Defaults to "random".</p>
+              </div>
+            </td>
+            <td>
+                  <code>&#39;random&#39;</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>test_size</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The proportion of the dataset to include in the test split.</p>
+              </div>
+            </td>
+            <td>
+                  <code>0.2</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>seed</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The seed to use for the random number generator.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>n_jobs</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[int]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>The number of jobs to run in parallel.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>X</code></td>
-          <td>
-                <code><span title="numpy.ndarray">ndarray</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The feature matrix.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>y</code></td>
-          <td>
-                <code><span title="numpy.ndarray">ndarray</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The target values.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>molecules</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="typing.Sequence">Sequence</span>[<span title="typing.Union">Union</span>[str, <span title="datamol.Mol">Mol</span>]]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>A list of molecules to be used for the split. Required for some splitting methods.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>method</code></td>
-          <td>
-                <code><span title="typing.Union">Union</span>[str, <span title="splito._split.SimpleSplittingMethod">SimpleSplittingMethod</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The splitting method to use. Defaults to "random".</p>
-            </div>
-          </td>
-          <td>
-                <code>&#39;random&#39;</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>test_size</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The proportion of the dataset to include in the test split.</p>
-            </div>
-          </td>
-          <td>
-                <code>0.2</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>seed</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The seed to use for the random number generator.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>n_jobs</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[int]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>The number of jobs to run in parallel.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h4 id="splito.train_test_split_indices" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">train_test_split_indices</span>
+            <span class="doc doc-object-name doc-function-name">train_test_split_indices</span>
 
 
 </h4>
@@ -1438,15 +1433,15 @@ that provides a less verbose way of using the different splitters.</p>
 </span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the indices of the train and test sets.</p>
 <p>Different from scikit-learn's API, we assume some data-types are not represented as numpy arrays
 and cannot be directly indexed as we do in <a class="autorefs autorefs-internal" href="#splito.train_test_split"><code>train_test_split</code></a>. This
 functions offers a way to just return the indices and take care of the split manually.</p>
 <p>See <a class="autorefs autorefs-internal" href="#splito.train_test_split"><code>train_test_split</code></a> for more information.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -1454,7 +1449,7 @@ functions offers a way to just return the indices and take care of the split man
 
   </div>
 
-  </div>
+    </div>
 
 </div><hr />
 <h2 id="advanced-usage">Advanced usage</h2>
@@ -1465,14 +1460,14 @@ functions offers a way to just return the indices and take care of the split man
 
 
 <h3 id="splito" class="doc doc-heading">
-          <span class="doc doc-object-name doc-module-name">splito</span>
+            <span class="doc doc-object-name doc-module-name">splito</span>
 
 
 </h3>
 
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
-  
+
 
   <div class="doc doc-children">
 
@@ -1488,23 +1483,23 @@ functions offers a way to just return the indices and take care of the split man
 
 
 <h4 id="splito.StratifiedDistributionSplit" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">StratifiedDistributionSplit</span>
+            <span class="doc doc-object-name doc-class-name">StratifiedDistributionSplit</span>
 
 
 </h4>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="sklearn.model_selection.GroupShuffleSplit">GroupShuffleSplit</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="sklearn.model_selection.GroupShuffleSplit">GroupShuffleSplit</span></code></p>
 
-  
+
       <p>Split a dataset using the values of a readout, so both train, test and valid have the same
 distribution of values. Instead of bining using some kind of interval (rolling_windows),
 we will instead use a 1D clustering of the readout.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -1520,8 +1515,7 @@ we will instead use a 1D clustering of the readout.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -1530,21 +1524,21 @@ we will instead use a 1D clustering of the readout.</p>
 
 
 <h4 id="splito.KMeansSplit" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">KMeansSplit</span>
+            <span class="doc doc-object-name doc-class-name">KMeansSplit</span>
 
 
 </h4>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="sklearn.model_selection.GroupShuffleSplit">GroupShuffleSplit</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="sklearn.model_selection.GroupShuffleSplit">GroupShuffleSplit</span></code></p>
 
-  
+
       <p>Group-based split that uses the k-Mean clustering in the input space for splitting.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -1560,8 +1554,7 @@ we will instead use a 1D clustering of the readout.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -1570,24 +1563,23 @@ we will instead use a 1D clustering of the readout.</p>
 
 
 <h4 id="splito.MaxDissimilaritySplit" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">MaxDissimilaritySplit</span>
+            <span class="doc doc-object-name doc-class-name">MaxDissimilaritySplit</span>
 
 
 </h4>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="splito._distance_split_base.KMeansReducedDistanceSplitBase">KMeansReducedDistanceSplitBase</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="splito._distance_split_base.KMeansReducedDistanceSplitBase">KMeansReducedDistanceSplitBase</span></code></p>
 
-  
+
       <p>Splits the data such that the train and test set are maximally dissimilar.</p>
 
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -1600,9 +1592,8 @@ we will instead use a 1D clustering of the readout.</p>
 <div class="doc doc-object doc-function">
 
 
-
 <h5 id="splito.MaxDissimilaritySplit.get_split_from_distance_matrix" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">get_split_from_distance_matrix</span>
+            <span class="doc doc-object-name doc-function-name">get_split_from_distance_matrix</span>
 
 
 </h5>
@@ -1611,9 +1602,10 @@ we will instead use a 1D clustering of the readout.</p>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>The Maximum Dissimilarity Split splits the data by trying to maximize the distance between train and test.</p>
+
 
 <details class="this-is-done-as-follows" open>
   <summary>This is done as follows</summary>
@@ -1621,7 +1613,7 @@ we will instead use a 1D clustering of the readout.</p>
 (2) As initial train sample, take the data point that is furthest from the initial test sample.
 (3) Iteratively add the train sample that is closest to the initial train sample.</p>
 </details>
-  </div>
+    </div>
 
 </div>
 
@@ -1629,8 +1621,7 @@ we will instead use a 1D clustering of the readout.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -1639,21 +1630,21 @@ we will instead use a 1D clustering of the readout.</p>
 
 
 <h4 id="splito.MolecularMinMaxSplit" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">MolecularMinMaxSplit</span>
+            <span class="doc doc-object-name doc-class-name">MolecularMinMaxSplit</span>
 
 
 </h4>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="sklearn.model_selection.BaseShuffleSplit">BaseShuffleSplit</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="sklearn.model_selection.BaseShuffleSplit">BaseShuffleSplit</span></code></p>
 
-  
+
       <p>Uses the Min-Max Diversity picker from RDKit and Datamol to have a diverse set of molecules in the train set.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -1669,8 +1660,7 @@ we will instead use a 1D clustering of the readout.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -1679,22 +1669,22 @@ we will instead use a 1D clustering of the readout.</p>
 
 
 <h4 id="splito.MolecularWeightSplit" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">MolecularWeightSplit</span>
+            <span class="doc doc-object-name doc-class-name">MolecularWeightSplit</span>
 
 
 </h4>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="sklearn.model_selection.BaseShuffleSplit">BaseShuffleSplit</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="sklearn.model_selection.BaseShuffleSplit">BaseShuffleSplit</span></code></p>
 
-  
+
       <p>Splits the dataset by sorting the molecules by their molecular weight
 and then finding an appropriate cutoff to split the molecules in two sets.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -1710,8 +1700,7 @@ and then finding an appropriate cutoff to split the molecules in two sets.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -1720,23 +1709,23 @@ and then finding an appropriate cutoff to split the molecules in two sets.</p>
 
 
 <h4 id="splito.MOODSplitter" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">MOODSplitter</span>
+            <span class="doc doc-object-name doc-class-name">MOODSplitter</span>
 
 
 </h4>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="sklearn.model_selection.BaseShuffleSplit">BaseShuffleSplit</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="sklearn.model_selection.BaseShuffleSplit">BaseShuffleSplit</span></code></p>
 
-  
+
       <p>The MOOD splitter takes in multiple candidate splitters and a set of
 deployment datapoints you plan to use a model on and prescribes one splitting method
 that creates the test set that is most representative of the deployment set.</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -1751,9 +1740,9 @@ that creates the test set that is most representative of the deployment set.</p>
 
 
 <h5 id="splito.MOODSplitter.prescribed_splitter_label" class="doc doc-heading">
-          <span class="doc doc-object-name doc-attribute-name">prescribed_splitter_label</span>
+            <span class="doc doc-object-name doc-attribute-name">prescribed_splitter_label</span>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-property"><code>property</code></small>
   </span>
@@ -1762,22 +1751,20 @@ that creates the test set that is most representative of the deployment set.</p>
 <div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">prescribed_splitter_label</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Textual identifier of the splitting method that was deemed most representative.</p>
-  </div>
+    </div>
 
 </div>
-
 
 
 
 <div class="doc doc-object doc-function">
 
 
-
 <h5 id="splito.MOODSplitter.visualize" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">visualize</span>
+            <span class="doc doc-object-name doc-function-name">visualize</span>
 
 
 </h5>
@@ -1788,25 +1775,23 @@ that creates the test set that is most representative of the deployment set.</p>
 </span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">)</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Visualizes the results of the splitting protocol by visualizing
 the test-to-train distance distributions resulting from each of the candidate splitters
 and coloring them based on their representativeness.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h5 id="splito.MOODSplitter.score_representativeness" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">score_representativeness</span>
+            <span class="doc doc-object-name doc-function-name">score_representativeness</span>
 
-  
+
   <span class="doc doc-labels">
       <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
   </span>
@@ -1817,85 +1802,77 @@ and coloring them based on their representativeness.</p>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Scores a candidate split by comparing the test-to-train and deployment-to-dataset distributions.
 A higher score should be interpreted as <em>more</em> representative</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h5 id="splito.MOODSplitter.get_prescribed_splitter" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">get_prescribed_splitter</span>
+            <span class="doc doc-object-name doc-function-name">get_prescribed_splitter</span>
 
 
 </h5>
 <div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_prescribed_splitter</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">BaseShuffleSplit</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the prescribed scikit-learn Splitter object that is most representative</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h5 id="splito.MOODSplitter.get_protocol_visualization" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">get_protocol_visualization</span>
+            <span class="doc doc-object-name doc-function-name">get_protocol_visualization</span>
 
 
 </h5>
 <div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_protocol_visualization</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">plt</span><span class="o">.</span><span class="n">Axes</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Visualizes the results of the splitting protocol</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h5 id="splito.MOODSplitter.get_protocol_results" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">get_protocol_results</span>
+            <span class="doc doc-object-name doc-function-name">get_protocol_results</span>
 
 
 </h5>
 <div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">get_protocol_results</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Returns the results of the splitting protocol in tabular form</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h5 id="splito.MOODSplitter.fit" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">fit</span>
+            <span class="doc doc-object-name doc-function-name">fit</span>
 
 
 </h5>
@@ -1909,8 +1886,8 @@ A higher score should be interpreted as <em>more</em> representative</p>
 </span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">)</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Follows the MOOD specification protocol to prescribe a train-test split that
 is most representative of the deployment setting and as such closes the
 testing-deployment gap.</p>
@@ -1920,106 +1897,105 @@ Using that observation, we select the train-test split that best replicates the 
 distribution (i.e. "the difficulty") of the deployment set.</p>
 
 
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>X</code></td>
+            <td>
+                  <code><span title="numpy.ndarray">ndarray</span></code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>An array of (n_samples, n_features)</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>y</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="numpy.ndarray">ndarray</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>An array of (n_samples, 1) targets, passed to candidate splitter's split() method</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>groups</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="numpy.ndarray">ndarray</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>An array of (n_samples,) groups, passed to candidate splitter's split() method</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>X_deployment</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="numpy.ndarray">ndarray</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>An array of (n_deployment_samples, n_features)</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>deployment_distances</code></td>
+            <td>
+                  <code><span title="typing.Optional">Optional</span>[<span title="numpy.ndarray">ndarray</span>]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>An array of (n_deployment_samples, 1) precomputed distances.</p>
+              </div>
+            </td>
+            <td>
+                  <code>None</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>progress</code></td>
+            <td>
+                  <code>bool</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>Whether to show a progress bar</p>
+              </div>
+            </td>
+            <td>
+                  <code>False</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-          <td><code>X</code></td>
-          <td>
-                <code><span title="numpy.ndarray">ndarray</span></code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An array of (n_samples, n_features)</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>y</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="numpy.ndarray">ndarray</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An array of (n_samples, 1) targets, passed to candidate splitter's split() method</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>groups</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="numpy.ndarray">ndarray</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An array of (n_samples,) groups, passed to candidate splitter's split() method</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>X_deployment</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="numpy.ndarray">ndarray</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An array of (n_deployment_samples, n_features)</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>deployment_distances</code></td>
-          <td>
-                <code><span title="typing.Optional">Optional</span>[<span title="numpy.ndarray">ndarray</span>]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>An array of (n_deployment_samples, 1) precomputed distances.</p>
-            </div>
-          </td>
-          <td>
-                <code>None</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>progress</code></td>
-          <td>
-                <code>bool</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>Whether to show a progress bar</p>
-            </div>
-          </td>
-          <td>
-                <code>False</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
-  </div>
+    </div>
 
 </div>
 
@@ -2027,8 +2003,7 @@ distribution (i.e. "the difficulty") of the deployment set.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2037,25 +2012,24 @@ distribution (i.e. "the difficulty") of the deployment set.</p>
 
 
 <h4 id="splito.PerimeterSplit" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">PerimeterSplit</span>
+            <span class="doc doc-object-name doc-class-name">PerimeterSplit</span>
 
 
 </h4>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="splito._distance_split_base.KMeansReducedDistanceSplitBase">KMeansReducedDistanceSplitBase</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="splito._distance_split_base.KMeansReducedDistanceSplitBase">KMeansReducedDistanceSplitBase</span></code></p>
 
-  
+
       <p>Places the pairs of data points with maximal pairwise distance in the test set.
 This was originally called the extrapolation-oriented split, introduced in  Szántai-Kis et. al., 2003</p>
 
 
-  
+
 
   <div class="doc doc-children">
-
 
 
 
@@ -2068,9 +2042,8 @@ This was originally called the extrapolation-oriented split, introduced in  Szá
 <div class="doc doc-object doc-function">
 
 
-
 <h5 id="splito.PerimeterSplit.get_split_from_distance_matrix" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">get_split_from_distance_matrix</span>
+            <span class="doc doc-object-name doc-function-name">get_split_from_distance_matrix</span>
 
 
 </h5>
@@ -2079,14 +2052,14 @@ This was originally called the extrapolation-oriented split, introduced in  Szá
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Iteratively places the pairs of data points with maximal pairwise distance in the test set.
 Anything that remains is added to the train set.</p>
 <p>Intuitively, this leads to a test set where all the datapoints are on the "perimeter"
 of the high-dimensional data cloud.</p>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2094,8 +2067,7 @@ of the high-dimensional data cloud.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2104,21 +2076,21 @@ of the high-dimensional data cloud.</p>
 
 
 <h4 id="splito.ScaffoldSplit" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">ScaffoldSplit</span>
+            <span class="doc doc-object-name doc-class-name">ScaffoldSplit</span>
 
 
 </h4>
 
 
-  <div class="doc doc-contents ">
-          <p class="doc doc-class-bases">
-            Bases: <code><span title="sklearn.model_selection.GroupShuffleSplit">GroupShuffleSplit</span></code></p>
+    <div class="doc doc-contents ">
+            <p class="doc doc-class-bases">
+              Bases: <code><span title="sklearn.model_selection.GroupShuffleSplit">GroupShuffleSplit</span></code></p>
 
-  
+
       <p>The default scaffold split popular in molecular modeling literature</p>
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -2134,8 +2106,7 @@ of the high-dimensional data cloud.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -2144,7 +2115,7 @@ of the high-dimensional data cloud.</p>
 
   </div>
 
-  </div>
+    </div>
 
 </div>
 
@@ -2246,9 +2217,7 @@ of the high-dimensional data cloud.</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.3220b9d7.min.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       

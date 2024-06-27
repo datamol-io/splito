@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../images/logo-black.svg">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.18">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.27">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.66ac8b77.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -152,7 +152,7 @@
       
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -798,17 +798,17 @@
 
 
 <h3 id="splito.lohi.LoSplitter" class="doc doc-heading">
-          <span class="doc doc-object-name doc-class-name">splito.lohi.LoSplitter</span>
+            <span class="doc doc-object-name doc-class-name">splito.lohi.LoSplitter</span>
 
 
 </h3>
 
 
-  <div class="doc doc-contents first">
+    <div class="doc doc-contents first">
 
 
 
-  
+
 
   <div class="doc doc-children">
 
@@ -820,13 +820,11 @@
 
 
 
-
 <div class="doc doc-object doc-function">
 
 
-
 <h4 id="splito.lohi.LoSplitter.__init__" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">__init__</span>
+            <span class="doc doc-object-name doc-function-name">__init__</span>
 
 
 </h4>
@@ -838,101 +836,98 @@
 </span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>A splitter that prepares data for training ML models for Lead Optimization or to guide
 molecular generative models. These models must be sensitive to minor modifications of
 molecules, and this splitter constructs a test that allows the evaluation of a model's
 ability to distinguish those modifications.</p>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>threshold</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>ECFP4 1024-bit Tanimoto similarity threshold.
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>threshold</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>ECFP4 1024-bit Tanimoto similarity threshold.
 Molecules more similar than this threshold are considered too similar and can be grouped together in one cluster.</p>
-            </div>
-          </td>
-          <td>
-                <code>0.4</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>min_cluster_size</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the minimum number of molecules per cluster.</p>
-            </div>
-          </td>
-          <td>
-                <code>5</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>max_clusters</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the maximum number of selected clusters. The remaining molecules go to the training set.
+              </div>
+            </td>
+            <td>
+                  <code>0.4</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>min_cluster_size</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the minimum number of molecules per cluster.</p>
+              </div>
+            </td>
+            <td>
+                  <code>5</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>max_clusters</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the maximum number of selected clusters. The remaining molecules go to the training set.
 This can be useful for limiting your test set to get more molecules in the train set.</p>
-            </div>
-          </td>
-          <td>
-                <code>50</code>
-          </td>
-        </tr>
-        <tr>
-          <td><code>std_threshold</code></td>
-          <td>
-                <code>float</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>the lower bound of the acceptable standard deviation for a cluster's values. It should be greater than the measurement noise.
+              </div>
+            </td>
+            <td>
+                  <code>50</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>std_threshold</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the lower bound of the acceptable standard deviation for a cluster's values. It should be greater than the measurement noise.
 For ChEMBL-like data set it to 0.60 for logKi and 0.70 for logIC50.
 Set it lower if you have a high-quality dataset.</p>
-            </div>
-          </td>
-          <td>
-                <code>0.6</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+              </div>
+            </td>
+            <td>
+                  <code>0.6</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
       <p>For more information, see a tutorial in the docs and Steshin 2023, Lo-Hi: Practical ML Drug Discovery Benchmark.</p>
 
-  </div>
+    </div>
 
 </div>
-
 
 <div class="doc doc-object doc-function">
 
 
-
 <h4 id="splito.lohi.LoSplitter.split" class="doc doc-heading">
-          <span class="doc doc-object-name doc-function-name">split</span>
+            <span class="doc doc-object-name doc-function-name">split</span>
 
 
 </h4>
@@ -941,103 +936,101 @@ Set it lower if you have a high-quality dataset.</p>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]</span>
 </span></code></pre></div>
 
-  <div class="doc doc-contents ">
-  
+    <div class="doc doc-contents ">
+
       <p>Split the dataset into test clusters and train.</p>
 
 
-
-  <p><strong>Parameters:</strong></p>
-  <table>
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Default</th>
-      </tr>
-    </thead>
-    <tbody>
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
         <tr>
-          <td><code>smiles</code></td>
-          <td>
-                <code>list[str]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>list of smiles.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
         </tr>
-        <tr>
-          <td><code>values</code></td>
-          <td>
-                <code>list[float]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>list of their continuous activity values.</p>
-            </div>
-          </td>
-          <td>
-              <em>required</em>
-          </td>
-        </tr>
-        <tr>
-          <td><code>verbose</code></td>
-          <td>
-                <code>int</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>set to 0 to turn off progressbar.</p>
-            </div>
-          </td>
-          <td>
-                <code>1</code>
-          </td>
-        </tr>
-    </tbody>
-  </table>
-
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>smiles</code></td>
+            <td>
+                  <code>list[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>list of smiles.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>values</code></td>
+            <td>
+                  <code>list[float]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>list of their continuous activity values.</p>
+              </div>
+            </td>
+            <td>
+                <em>required</em>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>verbose</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>set to 0 to turn off progressbar.</p>
+              </div>
+            </td>
+            <td>
+                  <code>1</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
 
-  <p><strong>Returns:</strong></p>
-  <table>
-    <thead>
-      <tr>
-<th>Name</th>        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
         <tr>
-<td><code>train_idx</code></td>          <td>
-                <code>list[int]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>list of train indices.</p>
-            </div>
-          </td>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
         </tr>
-        <tr>
-<td><code>clusters_idx</code></td>          <td>
-                <code>list[list[int]]</code>
-          </td>
-          <td>
-            <div class="doc-md-description">
-              <p>list of lists of cluster indices.</p>
-            </div>
-          </td>
-        </tr>
-    </tbody>
-  </table>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>train_idx</code></td>            <td>
+                  <code>list[int]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>list of train indices.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+<td><code>clusters_idx</code></td>            <td>
+                  <code>list[list[int]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>list of lists of cluster indices.</p>
+              </div>
+            </td>
+          </tr>
+      </tbody>
+    </table>
 
-  </div>
+    </div>
 
 </div>
 
@@ -1045,8 +1038,7 @@ Set it lower if you have a high-quality dataset.</p>
 
   </div>
 
-  </div>
-
+    </div>
 
 </div>
 
@@ -1148,9 +1140,7 @@ Set it lower if you have a high-quality dataset.</p>
     <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.3220b9d7.min.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="../assets/javascripts/bundle.ad660dcc.min.js"></script>
       
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
