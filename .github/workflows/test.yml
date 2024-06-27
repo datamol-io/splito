@@ -43,7 +43,11 @@ jobs:
             python=${{ matrix.python-version }}
 
       - name: Install library
-        run: python -m pip install --no-deps -e .  # -e (editable is needed for code coverage)
+        run: |
+          python -m pip install --no-deps -e .  # -e (editable is needed for code coverage)
+          # Note: Temporarily upgrade mkdocs-jupyter through PyPi
+          # See https://github.com/conda-forge/mkdocs-jupyter-feedstock/pull/30
+          python -m pip install mkdocs-jupyter -U
 
       - name: Run tests
         run: pytest
