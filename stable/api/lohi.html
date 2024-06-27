@@ -10,13 +10,13 @@
       
       
       
-        <link rel="canonical" href="https://github.com/datamol-io/splito/stable/api/simpd.html">
+        <link rel="canonical" href="https://github.com/datamol-io/splito/stable/api/lohi.html">
       
       
-        <link rel="prev" href="utils.html">
+        <link rel="prev" href="simpd.html">
       
       
-        <link rel="next" href="lohi.html">
+        <link rel="next" href="plot.html">
       
       
       <link rel="icon" href="../images/logo-black.svg">
@@ -24,7 +24,7 @@
     
     
       
-        <title>splito.simpd - Splito</title>
+        <title>splito.lohi - Splito</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#splitosimpd" class="md-skip">
+        <a href="#splitolohi" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              splito.simpd
+              splito.lohi
             
           </span>
         </div>
@@ -574,6 +574,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="simpd.html" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    splito.simpd
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -590,18 +611,18 @@
           
   
   <span class="md-ellipsis">
-    splito.simpd
+    splito.lohi
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="simpd.html" class="md-nav__link md-nav__link--active">
+      <a href="lohi.html" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    splito.simpd
+    splito.lohi
   </span>
   
 
@@ -623,19 +644,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#splito.simpd.SIMPDSplitter" class="md-nav__link">
+  <a href="#splito.lohi.LoSplitter" class="md-nav__link">
     <span class="md-ellipsis">
-      SIMPDSplitter
+      LoSplitter
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SIMPDSplitter">
+    <nav class="md-nav" aria-label="LoSplitter">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#splito.simpd.SIMPDSplitter.fit" class="md-nav__link">
+  <a href="#splito.lohi.LoSplitter.__init__" class="md-nav__link">
     <span class="md-ellipsis">
-      fit
+      __init__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splito.lohi.LoSplitter.split" class="md-nav__link">
+    <span class="md-ellipsis">
+      split
     </span>
   </a>
   
@@ -646,49 +676,10 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#splito.simpd.run_SIMPD" class="md-nav__link">
-    <span class="md-ellipsis">
-      run_SIMPD
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#splito.simpd.DEFAULT_SIMPD_DESCRIPTORS" class="md-nav__link">
-    <span class="md-ellipsis">
-      DEFAULT_SIMPD_DESCRIPTORS
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="lohi.html" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    splito.lohi
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -749,19 +740,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#splito.simpd.SIMPDSplitter" class="md-nav__link">
+  <a href="#splito.lohi.LoSplitter" class="md-nav__link">
     <span class="md-ellipsis">
-      SIMPDSplitter
+      LoSplitter
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="SIMPDSplitter">
+    <nav class="md-nav" aria-label="LoSplitter">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#splito.simpd.SIMPDSplitter.fit" class="md-nav__link">
+  <a href="#splito.lohi.LoSplitter.__init__" class="md-nav__link">
     <span class="md-ellipsis">
-      fit
+      __init__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#splito.lohi.LoSplitter.split" class="md-nav__link">
+    <span class="md-ellipsis">
+      split
     </span>
   </a>
   
@@ -769,24 +769,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#splito.simpd.run_SIMPD" class="md-nav__link">
-    <span class="md-ellipsis">
-      run_SIMPD
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#splito.simpd.DEFAULT_SIMPD_DESCRIPTORS" class="md-nav__link">
-    <span class="md-ellipsis">
-      DEFAULT_SIMPD_DESCRIPTORS
-    </span>
-  </a>
   
 </li>
       
@@ -808,32 +790,22 @@
   
 
 
-<h1 id="splitosimpd"><code>splito.simpd</code></h1>
+<h1 id="splitolohi"><code>splito.lohi</code></h1>
 
 
 <div class="doc doc-object doc-class">
 
 
 
-<h3 id="splito.simpd.SIMPDSplitter" class="doc doc-heading">
-            <span class="doc doc-object-name doc-class-name">splito.simpd.SIMPDSplitter</span>
+<h3 id="splito.lohi.LoSplitter" class="doc doc-heading">
+            <span class="doc doc-object-name doc-class-name">splito.lohi.LoSplitter</span>
 
 
 </h3>
 
 
     <div class="doc doc-contents first">
-            <p class="doc doc-class-bases">
-              Bases: <code><span title="sklearn.model_selection.BaseShuffleSplit">BaseShuffleSplit</span></code></p>
 
-
-      <p>The SIMPD (SImulated Medicinal chemistry Project Data) is based on a multi-objective
-genetic algorithm (MOGA) to split a set of compounds with bioactivity data into one or more training and
-test sets that differ from each other in ways resembling the differences between the temporal training/test
-splits observed in medicinal chemistry projects.</p>
-<p>It's the implementation proposed in "SIMPD: an Algorithm for Generating Simulated Time Splits for Validating Machine Learning Approaches"
-available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/6406049e6642bf8c8f10e189">https://chemrxiv.org/engage/chemrxiv/article-details/6406049e6642bf8c8f10e189</a>.</p>
-<p>The source code has been largely inspired by the original authors implementation available at <a href="https://github.com/rinikerlab/molecular_time_series/tree/55eb420ab0319fbb18cc00fe62a872ac568ad7f5">https://github.com/rinikerlab/molecular_time_series/tree/55eb420ab0319fbb18cc00fe62a872ac568ad7f5</a>.</p>
 
 
 
@@ -851,17 +823,25 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
 <div class="doc doc-object doc-function">
 
 
-<h4 id="splito.simpd.SIMPDSplitter.fit" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">fit</span>
+<h4 id="splito.lohi.LoSplitter.__init__" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">__init__</span>
 
 
 </h4>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">fit</span><span class="p">(</span><span class="n">X</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">y</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">groups</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="fm">__init__</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="nf">threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.4</span><span class="p">,</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">min_cluster_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">max_clusters</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">50</span><span class="p">,</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">std_threshold</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.6</span><span class="p">,</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">)</span>
 </span></code></pre></div>
 
     <div class="doc doc-contents ">
 
-      <p>Fit the splitter against a given dataset.</p>
+      <p>A splitter that prepares data for training ML models for Lead Optimization or to guide
+molecular generative models. These models must be sensitive to minor modifications of
+molecules, and this splitter constructs a test that allows the evaluation of a model's
+ability to distinguish those modifications.</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -876,13 +856,110 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
       </thead>
       <tbody>
           <tr class="doc-section-item">
-            <td><code>X</code></td>
+            <td><code>threshold</code></td>
             <td>
-                  <code><span title="numpy.ndarray">ndarray</span></code>
+                  <code>float</code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>An array of molecules.</p>
+                <p>ECFP4 1024-bit Tanimoto similarity threshold.
+Molecules more similar than this threshold are considered too similar and can be grouped together in one cluster.</p>
+              </div>
+            </td>
+            <td>
+                  <code>0.4</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>min_cluster_size</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the minimum number of molecules per cluster.</p>
+              </div>
+            </td>
+            <td>
+                  <code>5</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>max_clusters</code></td>
+            <td>
+                  <code>int</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the maximum number of selected clusters. The remaining molecules go to the training set.
+This can be useful for limiting your test set to get more molecules in the train set.</p>
+              </div>
+            </td>
+            <td>
+                  <code>50</code>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+            <td><code>std_threshold</code></td>
+            <td>
+                  <code>float</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>the lower bound of the acceptable standard deviation for a cluster's values. It should be greater than the measurement noise.
+For ChEMBL-like data set it to 0.60 for logKi and 0.70 for logIC50.
+Set it lower if you have a high-quality dataset.</p>
+              </div>
+            </td>
+            <td>
+                  <code>0.6</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+      <p>For more information, see a tutorial in the docs and Steshin 2023, Lo-Hi: Practical ML Drug Discovery Benchmark.</p>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h4 id="splito.lohi.LoSplitter.split" class="doc doc-heading">
+            <span class="doc doc-object-name doc-function-name">split</span>
+
+
+</h4>
+<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">split</span><span class="p">(</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">smiles</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">values</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">float</span><span class="p">],</span> <span class="n">n_jobs</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">verbose</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">tuple</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]]]</span>
+</span></code></pre></div>
+
+    <div class="doc doc-contents ">
+
+      <p>Split the dataset into test clusters and train.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Description</th>
+          <th>Default</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+            <td><code>smiles</code></td>
+            <td>
+                  <code>list[str]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>list of smiles.</p>
               </div>
             </td>
             <td>
@@ -890,13 +967,13 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>y</code></td>
+            <td><code>values</code></td>
             <td>
-                  <code><span title="numpy.ndarray">ndarray</span></code>
+                  <code>list[float]</code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>An array of activities (only 1D is supported).</p>
+                <p>list of their continuous activity values.</p>
               </div>
             </td>
             <td>
@@ -904,17 +981,50 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
             </td>
           </tr>
           <tr class="doc-section-item">
-            <td><code>groups</code></td>
+            <td><code>verbose</code></td>
             <td>
-                  <code><span title="typing.Optional">Optional</span>[<span title="numpy.ndarray">ndarray</span>]</code>
+                  <code>int</code>
             </td>
             <td>
               <div class="doc-md-description">
-                <p>An array of groups.</p>
+                <p>set to 0 to turn off progressbar.</p>
               </div>
             </td>
             <td>
-                  <code>None</code>
+                  <code>1</code>
+            </td>
+          </tr>
+      </tbody>
+    </table>
+
+
+    <p><span class="doc-section-title">Returns:</span></p>
+    <table>
+      <thead>
+        <tr>
+<th>Name</th>          <th>Type</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+          <tr class="doc-section-item">
+<td><code>train_idx</code></td>            <td>
+                  <code>list[int]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>list of train indices.</p>
+              </div>
+            </td>
+          </tr>
+          <tr class="doc-section-item">
+<td><code>clusters_idx</code></td>            <td>
+                  <code>list[list[int]]</code>
+            </td>
+            <td>
+              <div class="doc-md-description">
+                <p>list of lists of cluster indices.</p>
+              </div>
             </td>
           </tr>
       </tbody>
@@ -928,92 +1038,6 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
 
   </div>
 
-    </div>
-
-</div><hr />
-
-
-<div class="doc doc-object doc-function">
-
-
-<h3 id="splito.simpd.run_SIMPD" class="doc doc-heading">
-            <span class="doc doc-object-name doc-function-name">splito.simpd.run_SIMPD</span>
-
-
-</h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">run_SIMPD</span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="n">data</span><span class="p">:</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">,</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="n">mol_column</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;mol&quot;</span><span class="p">,</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="n">activity_column</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;active&quot;</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="n">pop_size</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">500</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="n">ngens</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="n">swap_fraction</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.1</span><span class="p">,</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="n">simpd_descriptors</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="n">target_train_frac_active</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    <span class="n">target_test_frac_active</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    <span class="n">target_test_set_frac</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.2</span><span class="p">,</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    <span class="n">target_delta_test_frac_active</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    <span class="n">target_GF_delta_window</span><span class="p">:</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">30</span><span class="p">),</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    <span class="n">target_G_val</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">70</span><span class="p">,</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    <span class="n">max_population_cluster_entropy</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mf">0.9</span><span class="p">,</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    <span class="n">pareto_weight_GF_delta</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    <span class="n">pareto_weight_G</span><span class="p">:</span> <span class="nb">float</span> <span class="o">=</span> <span class="mi">5</span><span class="p">,</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    <span class="n">num_threads</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    <span class="n">random_seed</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="mi">19</span><span class="p">,</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="n">verbose_pymoo</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="n">progress</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="n">progress_leave</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">)</span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents first">
-
-    </div>
-
-</div><hr />
-
-
-<div class="doc doc-object doc-attribute">
-
-
-
-<h3 id="splito.simpd.DEFAULT_SIMPD_DESCRIPTORS" class="doc doc-heading">
-            <span class="doc doc-object-name doc-attribute-name">splito.simpd.DEFAULT_SIMPD_DESCRIPTORS</span>
-
-
-  <span class="doc doc-labels">
-      <small class="doc doc-label doc-label-module-attribute"><code>module-attribute</code></small>
-  </span>
-
-</h3>
-<div class="language-python doc-signature highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">DEFAULT_SIMPD_DESCRIPTORS</span> <span class="o">=</span> <span class="n">DataFrame</span><span class="p">(</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    <span class="p">[</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        <span class="p">{</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SA_Score&quot;</span><span class="p">,</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>            <span class="s2">&quot;function&quot;</span><span class="p">:</span> <span class="s2">&quot;datamol.descriptors.sas&quot;</span><span class="p">,</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            <span class="s2">&quot;target_delta_value&quot;</span><span class="p">:</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="mf">2.8</span><span class="p">,</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="p">},</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="p">{</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;HeavyAtomCount&quot;</span><span class="p">,</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>            <span class="s2">&quot;function&quot;</span><span class="p">:</span> <span class="s2">&quot;datamol.descriptors.n_heavy_atoms&quot;</span><span class="p">,</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>            <span class="s2">&quot;target_delta_value&quot;</span><span class="p">:</span> <span class="mf">0.1</span> <span class="o">*</span> <span class="mi">31</span><span class="p">,</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        <span class="p">},</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        <span class="p">{</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;TPSA&quot;</span><span class="p">,</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>            <span class="s2">&quot;function&quot;</span><span class="p">:</span> <span class="s2">&quot;datamol.descriptors.tpsa&quot;</span><span class="p">,</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>            <span class="s2">&quot;target_delta_value&quot;</span><span class="p">:</span> <span class="mf">0.15</span> <span class="o">*</span> <span class="mf">88.0</span><span class="p">,</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>        <span class="p">},</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        <span class="p">{</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>            <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;fr_benzene/1000 HeavyAtoms&quot;</span><span class="p">,</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>            <span class="s2">&quot;function&quot;</span><span class="p">:</span> <span class="s2">&quot;splito.simpd.descriptors.fr_benzene_1000_heavy_atoms_count&quot;</span><span class="p">,</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>            <span class="s2">&quot;target_delta_value&quot;</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.2</span> <span class="o">*</span> <span class="mf">0.44</span><span class="p">,</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        <span class="p">},</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    <span class="p">]</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="p">)</span>
-</span></code></pre></div>
-
-    <div class="doc doc-contents first">
     </div>
 
 </div>
@@ -1052,7 +1076,7 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="utils.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: splito.utils">
+          <a href="simpd.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: splito.simpd">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1062,20 +1086,20 @@ available at <a href="https://chemrxiv.org/engage/chemrxiv/article-details/64060
                 Previous
               </span>
               <div class="md-ellipsis">
-                splito.utils
+                splito.simpd
               </div>
             </div>
           </a>
         
         
           
-          <a href="lohi.html" class="md-footer__link md-footer__link--next" aria-label="Next: splito.lohi">
+          <a href="plot.html" class="md-footer__link md-footer__link--next" aria-label="Next: splito.plot">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                splito.lohi
+                splito.plot
               </div>
             </div>
             <div class="md-footer__button md-icon">
