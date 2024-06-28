@@ -32,7 +32,6 @@ classifiers = [
 dependencies = [
     "tqdm",
     "loguru",
-    "pydantic",
     "numpy",
     "pandas",
     "scipy",
