@@ -37,8 +37,8 @@ jobs:
         with:
           environment-file: env.yml
           environment-name: my_env
-          cache-environment: false
-          cache-downloads: false
+          cache-environment: true
+          cache-downloads: true
           create-args: >-
             python=${{ matrix.python-version }}
 
